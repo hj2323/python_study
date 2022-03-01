@@ -357,3 +357,4 @@ data2 = [[1, 2, 3, 4], [5, 6, 7, 8]]
 arr2 = np.array(data2)
 # Print the 2d array
 print(arr2)
+
