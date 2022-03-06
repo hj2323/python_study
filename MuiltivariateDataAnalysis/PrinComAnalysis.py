@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 
 # 데이터 읽기
 heptathlon = pd.read_csv('/Users/hj1/Desktop/mva/heptathlon.csv')
+heptathlon = pd.read_csv('C:/data/mva/heptathlon.csv')
 
 # 기술통계량 구하기 - 소수점 이하 2자리 반올림 표시
 round(heptathlon.describe(), 2)
@@ -22,7 +23,7 @@ heptathlon.run800m = np.max(heptathlon.run800m) - heptathlon.run800m
 # 분석변수 선택하기
 feature = ['hurdles', 'highjump', 'shot','run200m','longjump', 'javelin', 'run800m']
 hep_data = heptathlon[feature]
-# hep_data = heptathlon.iloc[:, 1:8]
+# hep_data = heptathlon.iloc[:, 1:8] # 모든 케이스에 대해서 1부터 8까지 
 # hep_data = heptathlon.iloc[:, 1:-1]
 
 # 변수 표준화
