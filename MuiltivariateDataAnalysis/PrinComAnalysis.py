@@ -24,7 +24,7 @@ heptathlon.run800m = np.max(heptathlon.run800m) - heptathlon.run800m
 feature = ['hurdles', 'highjump', 'shot','run200m','longjump', 'javelin', 'run800m']
 hep_data = heptathlon[feature]
 # hep_data = heptathlon.iloc[:, 1:8] # 모든 케이스에 대해서 1부터 8까지 
-# hep_data = heptathlon.iloc[:, 1:-1]
+# hep_data = heptathlon.iloc[:, 1:-1] #[1:-1] -1이 마지막열이라는 것을 나타내줌
 
 # 변수 표준화
 from sklearn.preprocessing import StandardScaler
@@ -51,7 +51,7 @@ hep_pca = pca.fit_transform(x)
 
 pca.explained_variance_
 
-pca.explained_variance_
+pca.explained_variance_ratio
 
 # 주성분계수
 np.round(pca.components_, 3)
